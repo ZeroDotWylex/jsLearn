@@ -1,8 +1,21 @@
 let money, time;
 
+let startButton = document.querySelector('#start'),
+    expenses = document.querySelectorAll('.expenses-item'),
+    expBtn = document.querySelector('.expenses-item-btn'),
+    optExpBtn = document.querySelector('.optionalexpenses-btn'),
+    countBudgetBtn = document.querySelector('.count-budget-btn'),
+    optExpenses = document.querySelectorAll('.optionalexpenses-item'),
+    incomeInput = document.querySelectorAll('#income'),
+    savingsCheckbox = document.querySelector('#savings'),
+    yearInput = document.querySelector('.year-value'),
+    monthInput = document.querySelector('.month-value'),
+    dayInput = document.querySelector('.day-value'),
+    outputValues = document.querySelectorAll('[class$="value"]');
+
 function start() {
-    money = +prompt("Ваш бюджет на месяц?",'');
-    time = prompt("Введите дату в формате YYYY-MM-DD",'');
+    let money = +prompt("Ваш бюджет на месяц?",''),
+        time = prompt("Введите дату в формате YYYY-MM-DD",'');
 
     while (isNaN(money) || money == "" || money == null) {
         money = +prompt("Ваш бюджет на месяц?",'');
