@@ -136,6 +136,11 @@ a:active {
     cursor: pointer
 }
 
+.data [class$="-btn"][disabled] {
+    background-image: linear-gradient(336deg, #3b3b3b, #808080), linear-gradient(#9b9898, #6d6b6b);
+    color: #c2bebe;
+}
+
 .data .optionalexpenses-item {
     width: calc((100%/3) - 4px)
 }
